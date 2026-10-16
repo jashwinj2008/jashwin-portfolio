@@ -1297,10 +1297,12 @@ textarea.form-input::-webkit-resizer { display: none; }
   border-bottom: none;
 }
 
-/* Buttons inside the image column: side-by-side row */
+/* Buttons inside the image column: full-width side-by-side row */
 .project-image-col .project-cta-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 0;
-  justify-content: flex-start;
 }
 
 .back-to-portfolio-btn {
