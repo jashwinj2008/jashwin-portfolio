@@ -1256,21 +1256,28 @@ textarea.form-input::-webkit-resizer { display: none; }
   margin-bottom: 30px;
 }
 
-.project-split-layout .project-main-image-box {
+/* Left column: image + buttons stacked */
+.project-image-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.project-image-col .project-main-image-box {
   margin-bottom: 0;
-  flex: none;
   width: 100%;
 }
 
+/* Right column: meta stack only, stretches to fill height */
 .project-details-panel {
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
 .project-meta-stack {
   display: flex;
   flex-direction: column;
+  flex: 1;
   background: var(--border-gradient-onyx);
   border: 1px solid var(--jet);
   border-radius: 14px;
@@ -1278,12 +1285,22 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .project-meta-stack .project-meta-card {
-  padding: 14px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 18px 20px;
   border-bottom: 1px solid var(--jet);
 }
 
 .project-meta-stack .project-meta-card:last-child {
   border-bottom: none;
+}
+
+/* Buttons inside the image column: side-by-side row */
+.project-image-col .project-cta-group {
+  margin-bottom: 0;
+  justify-content: flex-start;
 }
 
 .back-to-portfolio-btn {
@@ -1563,18 +1580,19 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .project-split-layout {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 28px;
   }
 
-  .project-split-layout .project-main-image-box {
+  .project-image-col {
     flex: 1.5;
-    width: auto;
+    min-width: 0;
   }
 
   .project-details-panel {
     flex: 1;
     min-width: 0;
+    align-self: stretch;
   }
 
 }

@@ -210,25 +210,37 @@
             <span>Back to Portfolio</span>
           </a>
 
-          <div class="project-badge-box">
-            <span>Web development</span>
-          </div>
-
           <h1 class="h2 article-title">Kappa Fashion Store</h1>
         </header>
 
-        <!-- Split Layout: Image (left) + Details Panel (right) -->
+        <!-- Split Layout: Image+Buttons (left) + Meta Details (right) -->
         <div class="project-split-layout">
 
-          <!-- Project Hero Image -->
-          <figure class="project-main-image-box">
-            <img src="./assets/images/kappa-fashion-store.png" alt="Kappa Fashion Store Preview" class="project-main-image" loading="lazy">
-          </figure>
+          <!-- Left: Hero Image + Action Buttons beneath -->
+          <div class="project-image-col">
 
-          <!-- Right: Meta Details + Action Buttons -->
+            <figure class="project-main-image-box">
+              <img src="./assets/images/kappa-fashion-store.png" alt="Kappa Fashion Store Preview" class="project-main-image" loading="lazy">
+            </figure>
+
+            <!-- Action Buttons — side by side under the image -->
+            <div class="project-cta-group">
+              <a href="https://github.com/jashwinj2008/kappa-fashion-store" target="_blank" rel="noopener noreferrer" class="project-action-btn primary" id="viewLiveProject">
+                <ion-icon name="open-outline"></ion-icon>
+                <span>View Live Project</span>
+              </a>
+
+              <a href="https://github.com/jashwinj2008/kappa-fashion-store" target="_blank" rel="noopener noreferrer" class="project-action-btn secondary" id="viewSourceCode">
+                <ion-icon name="logo-github"></ion-icon>
+                <span>Source Code</span>
+              </a>
+            </div>
+
+          </div><!-- /.project-image-col -->
+
+          <!-- Right: Meta Details only (fills full height) -->
           <div class="project-details-panel">
 
-            <!-- Project Meta Details (vertical stack) -->
             <div class="project-meta-stack">
               <div class="project-meta-card">
                 <p class="meta-label">Category</p>
@@ -249,19 +261,6 @@
                 <p class="meta-label">Timeline</p>
                 <p class="meta-info">2024</p>
               </div>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="project-cta-group">
-              <a href="https://github.com/jashwinj2008/kappa-fashion-store" target="_blank" rel="noopener noreferrer" class="project-action-btn primary" id="viewLiveProject">
-                <ion-icon name="open-outline"></ion-icon>
-                <span>View Live Project</span>
-              </a>
-
-              <a href="https://github.com/jashwinj2008/kappa-fashion-store" target="_blank" rel="noopener noreferrer" class="project-action-btn secondary" id="viewSourceCode">
-                <ion-icon name="logo-github"></ion-icon>
-                <span>Source Code</span>
-              </a>
             </div>
 
           </div><!-- /.project-details-panel -->
