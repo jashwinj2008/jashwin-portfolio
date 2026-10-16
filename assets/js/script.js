@@ -126,3 +126,36 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// navigate by URL hash (e.g. index.html#portfolio)
+const navigateToHash = function () {
+  const hash = window.location.hash.replace("#", "").trim().toLowerCase();
+  if (!hash) return;
+
+  let pageMatched = false;
+  for (let j = 0; j < pages.length; j++) {
+    if (pages[j].dataset.page === hash) {
+      pages[j].classList.add("active");
+      pageMatched = true;
+    } else {
+      pages[j].classList.remove("active");
+    }
+  }
+
+  if (pageMatched) {
+    for (let i = 0; i < navigationLinks.length; i++) {
+      if (navigationLinks[i].textContent.trim().toLowerCase() === hash) {
+        navigationLinks[i].classList.add("active");
+      } else {
+        navigationLinks[i].classList.remove("active");
+      }
+    }
+    window.scrollTo(0, 0);
+  }
+};
+
+window.addEventListener("hashchange", navigateToHash);
+window.addEventListener("DOMContentLoaded", navigateToHash);
+if (document.readyState === "complete" || document.readyState === "interactive") {
+  navigateToHash();
+}
